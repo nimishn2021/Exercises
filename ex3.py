@@ -1,6 +1,6 @@
 def find_frequency(*args):
     res = {}
-    k = 1
+    k = 0
     for arg in args:
         freq = {}
         for item in arg:
@@ -11,7 +11,7 @@ def find_frequency(*args):
         temp = {}
         for i in sorted(freq):
             temp[i] = freq[i]
-        res[f"dict{k}"] = temp
+        res[f"{k}"] = temp
         k += 1
     return res
 

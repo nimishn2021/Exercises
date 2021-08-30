@@ -1,3 +1,15 @@
+def max(num1, num2):
+    if num1 > num2:
+        return num1
+    return num2
+
+
+def min(num1, num2):
+    if num1 < num2:
+        return num1
+    return num2
+
+
 def greatest_and_least(x, arr):
     gr = float('-inf')
     lr = float('inf')
