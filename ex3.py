@@ -1,18 +1,19 @@
+# Function to find the frequency of occurance of each element
 def find_frequency(*args):
-    res = {}
-    k = 0
-    for arg in args:
-        freq = {}
-        for item in arg:
-            if item in freq:
+    res = {}  # Initialized an empty dictionary
+    k = 0  # Variable to keep track of the list index
+    for arg in args:  # Ietrating over each list
+        freq = {}  # Initialize empty dict to store the frequency of each element in single list
+        for item in arg:  # Iterate over the list elements
+            if item in freq:  # If the element is present increase it's freq count
                 freq[item] += 1
-            else:
+            else:  # Otherwise initialize freq count to one
                 freq[item] = 1
-        temp = {}
+        temp = {}  # Initialize a dict to store the sorted dict values
         for i in sorted(freq):
             temp[i] = freq[i]
-        res[f"{k}"] = temp
-        k += 1
+        res[f"{k}"] = temp  # Then insert the freq dict value for each list to the final resultant dict
+        k += 1  # Increment the list index
     return res
 
 

@@ -1,12 +1,13 @@
+# Function to find the greater number sum
 def find_greater_sum(x, *args):
-    res = []
-    for arg in args:
-        for item in arg:
-            if item > x and item not in res:
+    res = []  # Initialize an empty list
+    for arg in args:  # Iterate over each list one by one
+        for item in arg:  # Then iterate over each element of the list
+            if item > x and item not in res:  # If the number is greater than threshold and not present in the result then append it to the result
                 res.append(item)
 
     total = 0
-    for item in res:
+    for item in res:  # Iterate over the result list to find the total
         total += item
     return total
 
