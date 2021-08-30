@@ -2,13 +2,12 @@ def find_greater_sum(x, *args):
     res = []
     for arg in args:
         for item in arg:
-            if item > x:
+            if item > x and item not in res:
                 res.append(item)
-    res = list(set(res))
+
     total = 0
     for item in res:
         total += item
-    print(res)
     return total
 
 

@@ -1,13 +1,13 @@
 def greatest_and_least(x, arr):
     gr = float('-inf')
     lr = float('inf')
-    for i in range(len(arr)):
-        y = arr[i] % x
+    for num in arr:
+        y = num % x
         if y > 0 and y > gr:
-            num1 = arr[i]
+            num1 = num
             gr = max(gr, y)
         if y > 0 and y < lr:
-            num2 = arr[i]
+            num2 = num
             lr = min(lr, y)
 
     return [num1, num2]
